@@ -31,7 +31,7 @@ func main() {
 	for _, contact := range contacts {
 		//log.Println(contact.Jid.String(), checkedUID.String())
 		if contact.Jid.String() == checkedUID.String() {
-			log.Println("GOT IT!", contact.TeamStatus)
+			log.Println("GOT IT!", contact.TeamStatus, contact.IsArchive, *contact.LastActivity)
 			return
 		}
 	}
